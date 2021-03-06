@@ -3,12 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>Titanic Predictor</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
   </head>
   <body>
     <h1>Home Page</h1>
+    <button type="button" onclick="clicked()">Click</button>
     <h1>Get your titanic predictions here</h1>
     <p>Enter in the details of the made up person on the titanic voyage</p>
     <p>We will let you know our prediction on their survival</p>
+    <p>this is new</p>
     <form action="{% url 'result' %}">
       {% csrf_token %}
       <p>Pclass</p>
@@ -30,5 +34,7 @@
       <br>
       <input type="submit">
     </form>
+    <script type="text/javascript" src="{% static 'main.js' %}">
+    </script>
   </body>
 </html>
